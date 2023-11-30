@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "advent-of-code"
+version = "0.1.0"
+description = "My advent of code solutions in python."
+authors = ["Dorothy House"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.26.2"
+pylint = "^3.0.2"
+isort = "^5.12.0"
+black = "^23.11.0"
+commitizen = "^3.12.0"
+pre-commit = "^3.5.0"
+
+
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "pep440"
+version_provider = "poetry"
+update_changelog_on_bump = true
+major_version_zero = true
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
