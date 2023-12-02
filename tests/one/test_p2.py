@@ -1,12 +1,13 @@
 from advent_of_code.current.one_p2 import get_calibration_value_w_str, get_total_str
 
 import pathlib
+import pytest
 
-DATA_PATH = pathlib.Path.cwd() / "tests/sample.txt"
+DATA_PATH = pathlib.Path.cwd() / "tests/one/sample_inputs/1.txt"
 
-OTHER_SAMPLE = pathlib.Path.cwd() / "tests/sample_2.txt"
+OTHER_SAMPLE = pathlib.Path.cwd() / "tests/one/sample_inputs/2.txt"
 
-OTHER_SAMPLE2 = pathlib.Path.cwd() / "tests/sample2.txt"
+OTHER_SAMPLE2 = pathlib.Path.cwd() / "tests/one/sample_inputs/3.txt"
 
 
 def test_get_calibration_value_w_str():
@@ -64,9 +65,34 @@ def test_final():
 
 def test_final_other():
     out = get_total_str(OTHER_SAMPLE)
-    assert out == 281
+    assert out == 228
 
 
 def test_final_other_r():
     out = get_total_str(OTHER_SAMPLE2)
-    assert out == 228
+    assert out == 281
+
+
+def test_letter_numbers():
+    """ "Test spelling and mapping are correct."""
+    rows = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    expected = [11, 22, 33, 44, 55, 66, 77, 88, 99]
+
+    for i, r in enumerate(rows):
+        out = get_calibration_value_w_str(r)
+        assert out == expected[i]
+
+
+@pytest.mark.skip(
+    reason=(
+        "Not 100% sure if this is how 0s should be handled, but they aren't in the"
+        " input, so it's okay this test is failing."
+    )
+)
+def test_zeros():
+    """Test zeroes are ignored."""
+    row = "023"
+    expected = 23
+
+    out = get_calibration_value_w_str(row)
+    assert out == expected

@@ -2,7 +2,7 @@ from advent_of_code.current.one import get_calibration_value, get_total
 
 import pathlib
 
-DATA_PATH = pathlib.Path.cwd() / "tests/sample.txt"
+DATA_PATH = pathlib.Path.cwd() / "tests/one/sample_inputs/1.txt"
 
 
 def test_get_calibration_values():
