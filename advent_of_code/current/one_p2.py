@@ -4,7 +4,7 @@ import pathlib
 INPUT_PATH = pathlib.Path.cwd() / "advent_of_code/current/inputs/one.txt"
 
 STR_NUMS = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-SOLID_STR_NUMS = "onetwothreefourfivesixseveneightnine"
+SOLID_STR_NUMS = "one two three four five six seven eight nine"
 STR_MAPPING = {
     "one": "1",
     "two": "2",
@@ -75,6 +75,7 @@ def get_calibration_value_w_str(line: str) -> int:
         left += 1
         right -= 1
     return int(left_num + right_num)
+
 
 if __name__ == "__main__":
     out = get_total_str()
