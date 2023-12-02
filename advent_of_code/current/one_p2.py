@@ -75,3 +75,7 @@ def get_calibration_value_w_str(line: str) -> int:
         left += 1
         right -= 1
     return int(left_num + right_num)
+
+if __name__ == "__main__":
+    out = get_total_str()
+    print(out)
