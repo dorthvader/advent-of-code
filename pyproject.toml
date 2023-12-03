@@ -18,6 +18,9 @@ requests = "^2.31.0"
 pytest = "^7.4.3"
 pydantic = "^2.5.2"
 
+[tool.pylint]
+max-line-length = 120
+disable = ["R0801"]
 
 
 [tool.commitizen]
