@@ -1,4 +1,4 @@
-from advent_of_code.current.one import get_calibration_value, get_total
+from advent_of_code.current.one.part_one import get_calibration_value, get_total
 
 import pathlib
 

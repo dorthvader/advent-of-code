@@ -1,10 +1,11 @@
-from advent_of_code.current.two import parse_id, parse_turn, parse_game, Game
-from advent_of_code.current.two_main import get_total
+from advent_of_code.current.two.utils import parse_id, parse_turn, parse_game, Game
+from advent_of_code.current.two.part_one import get_total
 
 import pathlib
 
 ROW = "Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green"
 
+POSSIBLE = {"red": 12, "blue": 14, "green": 13}
 DATA_PATH = pathlib.Path.cwd() / "tests/two/sample_inputs/1.txt"
 
 def test_parse_id():
@@ -36,7 +37,7 @@ def test_parse_game():
 def test_get_total():
     exp_total = 8
 
-    total = get_total(file_path=DATA_PATH)
+    total = get_total(file_path=DATA_PATH, possible=POSSIBLE)
 
     assert total == exp_total
 

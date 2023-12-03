@@ -3,7 +3,7 @@
 import csv
 import pathlib
 
-from advent_of_code.current.two import parse_game
+from advent_of_code.current.two.utils import parse_game
 
 INPUT_PATH = pathlib.Path.cwd() / "advent_of_code/current/inputs/two.txt"
 

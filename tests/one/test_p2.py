@@ -1,4 +1,4 @@
-from advent_of_code.current.one_p2 import get_calibration_value_w_str, get_total_str
+from advent_of_code.current.one.part_two import get_calibration_value_w_str, get_total_str
 
 import pathlib
 import pytest
